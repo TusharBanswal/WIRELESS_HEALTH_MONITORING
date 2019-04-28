@@ -1,17 +1,15 @@
+//Receiver Code For Wireless Health Monitoring System
 
 
 
+#include <RH_ASK.h>   // Include RadioHead Amplitude Shift Keying Library 
  
-// Include RadioHead Amplitude Shift Keying Library
-#include <RH_ASK.h>
-// Include dependant SPI Library 
-#include <SPI.h> 
-#include <LiquidCrystal.h>
-
+#include <SPI.h> // Include dependant SPI Library
+#include <LiquidCrystal.h> //Include LCD library
  
-// Create Amplitude Shift Keying Object
+
 LiquidCrystal lcd(8, 6 , 5, 4, 3, 2);  // sets the interfacing pins // Creates an LC object. Parameters: (rs, enable, d4, d5, d6, d7) //
-RH_ASK rf_driver;
+RH_ASK rf_driver; // Create Amplitude Shift Keying Object
  
 char StringReceived[22];   //setting maximum string length
 int a,b;
